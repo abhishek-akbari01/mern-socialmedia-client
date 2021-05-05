@@ -20,7 +20,7 @@ export default function Navbar() {
                     <button className="btn waves-effect waves-light #64b5f6 blue darken-1" onClick={() => {
                         localStorage.clear()
                         dispatch({type:"CLEAR"})
-                        history.push('/login')
+                        history.push('/signin')
 
                     }} >Logout</button>    
                 </li>
@@ -29,7 +29,7 @@ export default function Navbar() {
         else
         {
             return [
-                <li><Link to="/login">Login</Link></li>,
+                <li><Link to="/signin">Login</Link></li>,
                 <li><Link to="/signup">Signup</Link></li>
             ]
         }
@@ -38,7 +38,7 @@ export default function Navbar() {
     return (
         <nav>
             <div className="nav-wrapper white" >
-            <Link to={state ? "/" : "/login"} className="brand-logo left">Follow Karna</Link>
+            <Link to={state ? "/" : "/signin"} className="brand-logo left">Follow Karna</Link>
             <ul id="nav-mobile" className="right">
                 {renderList()}
             </ul>
