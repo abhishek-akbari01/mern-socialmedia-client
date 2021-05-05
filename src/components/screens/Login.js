@@ -16,7 +16,9 @@ export default function Login() {
 
     const postData = () => {
 
-        fetch(`${API}/signin`, {
+        fetch(`${API}/signin`,
+        {mode: "no-cors"},
+        {
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
